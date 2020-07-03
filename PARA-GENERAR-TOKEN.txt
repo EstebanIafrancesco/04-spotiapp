@@ -1,0 +1,9 @@
+Url para generar token:
+
+Es en el método POST
+
+https://accounts.spotify.com/api/token  --> verificar
+
+grant_type: client_credentials
+client_id: e439d505be7f473cbb433cb209ef373a
+client_secret: 59278a30572e4faeb8f7b1b781cac845
