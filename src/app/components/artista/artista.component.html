@@ -18,3 +18,39 @@
     </button>
   </div>
 </div>
+
+<div class="row m-5">
+  <div class="col">
+    <h4>Top tracks</h4>
+    <table class="table" style="color: whitesmoke;">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Album</th>
+          <th>Cación</th>
+          <th>Vista previa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let track of topTracks">
+          <td>
+            <img [src]="track.album.images | noimage" class="img-thumb" />
+          </td>
+          <td>{{ track.album.name }}</td>
+          <td>{{ track.name }}</td>
+          <td>
+            <iframe
+              [src]="track.uri | domseguro "
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+            <!-- <audio [src]="track.preview_url" controls></audio> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
